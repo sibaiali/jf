@@ -13,7 +13,6 @@
     --dusty-rose: #D4928A;
     --terracotta: #C07A72;
     --deep-rose: #A05A55;
-    --sage: #B8C5B2;
     --warm-brown: #4A3228;
     --soft-brown: #7A5548;
     --gold: #C9A96E;
@@ -25,7 +24,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -48,7 +46,6 @@
     z-index: 0;
   }
 
-  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
@@ -69,91 +66,27 @@
     height: 56px;
   }
 
-  .nav-logo {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 1.15rem;
-    color: var(--dusty-rose);
-  }
+  .nav-logo { font-family: 'Petit Formal Script', cursive; font-size: 1.15rem; color: var(--dusty-rose); }
 
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-mid);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-mid); text-decoration: none; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--terracotta); }
 
-  /* ── CONTAINER ── */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 48px 32px 100px;
-    position: relative;
-    z-index: 1;
-  }
+  .container { max-width: 960px; margin: 0 auto; padding: 48px 32px 100px; position: relative; z-index: 1; }
 
-  /* ── HERO ── */
-  .hero {
-    text-align: center;
-    padding: 72px 0 52px;
-  }
+  .hero { text-align: center; padding: 72px 0 52px; }
 
-  .hero-eyebrow {
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 1.4rem;
-    color: var(--dusty-rose);
-    display: block;
-    margin-bottom: 18px;
-    animation: fadeDown 0.8s ease both;
-  }
+  .hero-eyebrow { font-family: 'Petit Formal Script', cursive; font-size: 1.4rem; color: var(--dusty-rose); display: block; margin-bottom: 18px; animation: fadeDown 0.8s ease both; }
 
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    font-weight: 300;
-    color: var(--warm-brown);
-    line-height: 1.08;
-    margin-bottom: 14px;
-    animation: fadeDown 0.9s ease 0.1s both;
-  }
-
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; color: var(--warm-brown); line-height: 1.08; margin-bottom: 14px; animation: fadeDown 0.9s ease 0.1s both; }
   .hero h1 em { font-style: italic; color: var(--terracotta); }
 
-  .hero-sub {
-    font-size: 0.88rem;
-    color: var(--text-light);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 500;
-    animation: fadeDown 1s ease 0.2s both;
-  }
+  .hero-sub { font-size: 0.88rem; color: var(--text-light); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; animation: fadeDown 1s ease 0.2s both; }
 
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 32px auto;
-    max-width: 260px;
-  }
-
-  .divider::before,.divider::after {
-    content:'';flex:1;height:1px;
-    background: linear-gradient(90deg,transparent,var(--rose),transparent);
-  }
-
+  .divider { display: flex; align-items: center; gap: 14px; margin: 32px auto; max-width: 260px; }
+  .divider::before,.divider::after { content:''; flex:1; height:1px; background: linear-gradient(90deg,transparent,var(--rose),transparent); }
   .divider span { color: var(--dusty-rose); font-size: 0.9rem; }
 
-  /* ── AFFIRMATION ── */
   .affirmation {
     background: linear-gradient(135deg, var(--terracotta) 0%, var(--dusty-rose) 65%, #D4A090 100%);
     border-radius: 22px;
@@ -166,92 +99,22 @@
     animation: fadeUp 1s ease 0.3s both;
   }
 
-  .affirmation::before {
-    content: '❝';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 7rem;
-    color: rgba(255,255,255,0.08);
-    position: absolute;
-    top: -12px; left: 20px;
-    line-height: 1;
-  }
+  .affirmation::before { content: '❝'; font-family: 'Cormorant Garamond', serif; font-size: 7rem; color: rgba(255,255,255,0.08); position: absolute; top: -12px; left: 20px; line-height: 1; }
+  .affirmation p { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-style: italic; color: white; font-weight: 300; position: relative; z-index: 1; }
+  .affirmation small { color: rgba(255,255,255,0.7); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-top: 10px; }
 
-  .affirmation p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-style: italic;
-    color: white;
-    font-weight: 300;
-    position: relative;
-    z-index: 1;
-  }
-
-  .affirmation small {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    display: block;
-    margin-top: 10px;
-  }
-
-  /* ── SECTION HEADERS ── */
   .section-block { margin-bottom: 60px; }
-
-  .section-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--warm-brown);
-    margin-bottom: 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
+  .section-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--warm-brown); margin-bottom: 22px; display: flex; align-items: center; gap: 10px; }
   .floret { color: var(--dusty-rose); font-size: 0.85rem; }
 
-  /* ── JOURNEY CARDS ── */
-  .journey-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 16px;
-  }
-
-  .journey-card {
-    background: var(--white);
-    border: 1px solid var(--rose);
-    border-radius: 20px;
-    padding: 26px 22px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
-  }
-
+  .journey-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .journey-card { background: var(--white); border: 1px solid var(--rose); border-radius: 20px; padding: 26px 22px; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .journey-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(160,90,85,0.15); }
-
-  .journey-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    border-radius: 0 0 20px 20px;
-  }
-
+  .journey-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; border-radius: 0 0 20px 20px; }
   .journey-card:nth-child(1)::after { background: linear-gradient(90deg,var(--rose),var(--dusty-rose)); }
   .journey-card:nth-child(2)::after { background: linear-gradient(90deg,var(--dusty-rose),var(--terracotta)); }
   .journey-card:nth-child(3)::after { background: linear-gradient(90deg,var(--terracotta),var(--gold)); }
-
   .journey-week { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.16em; color:var(--text-light); font-weight:600; margin-bottom:10px; }
   .journey-badge { width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.15rem; margin-bottom:12px; }
   .journey-card:nth-child(1) .journey-badge { background:var(--blush); }
@@ -260,77 +123,23 @@
   .journey-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--warm-brown); margin-bottom:7px; }
   .journey-desc { font-size:0.82rem; color:var(--text-mid); line-height:1.6; }
 
-  /* ── MACROS ── */
   .macros-row { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px; }
-
-  .macro-pill {
-    background: var(--white);
-    border: 1.5px solid var(--rose);
-    border-radius: 50px;
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-    min-width: 140px;
-    transition: box-shadow 0.2s;
-  }
-
+  .macro-pill { background: var(--white); border: 1.5px solid var(--rose); border-radius: 50px; padding: 12px 24px; display: flex; align-items: center; gap: 12px; flex: 1; min-width: 140px; transition: box-shadow 0.2s; }
   .macro-pill:hover { box-shadow: 0 4px 16px rgba(160,90,85,0.12); }
   .macro-icon { font-size:1.4rem; }
   .macro-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-light); font-weight:600; display:block; }
   .macro-value { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--warm-brown); font-weight:600; line-height:1; }
 
-  /* ── CALLOUT ── */
-  .callout {
-    background: linear-gradient(135deg,#FDF0EB,#FAE8E0);
-    border: 1.5px solid var(--rose);
-    border-left: 4px solid var(--dusty-rose);
-    border-radius: 18px;
-    padding: 22px 28px;
-    margin-bottom: 28px;
-  }
-
-  .callout-title {
-    font-family: 'Cormorant Garamond',serif;
-    font-size: 1.08rem;
-    font-weight: 600;
-    color: var(--deep-rose);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
+  .callout { background: linear-gradient(135deg,#FDF0EB,#FAE8E0); border: 1.5px solid var(--rose); border-left: 4px solid var(--dusty-rose); border-radius: 18px; padding: 22px 28px; margin-bottom: 28px; }
+  .callout-title { font-family: 'Cormorant Garamond',serif; font-size: 1.08rem; font-weight: 600; color: var(--deep-rose); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
   .callout ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
-
-  .callout li {
-    font-size: 0.86rem;
-    color: var(--text-mid);
-    display: flex;
-    align-items: flex-start;
-    gap: 9px;
-    line-height: 1.5;
-  }
-
+  .callout li { font-size: 0.86rem; color: var(--text-mid); display: flex; align-items: flex-start; gap: 9px; line-height: 1.5; }
   .callout li::before { content:'✦'; color:var(--dusty-rose); font-size:0.58rem; margin-top:6px; flex-shrink:0; }
 
-  /* ── WEEK GRID ── */
   .week-grid { display:grid; gap:12px; }
-
-  .day-card {
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-    display: grid;
-    grid-template-columns: 140px 1fr 1fr;
-  }
-
+  .day-card { background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid transparent; transition: all 0.3s ease; display: grid; grid-template-columns: 140px 1fr 1fr; }
   .day-card:hover { border-color:var(--rose); box-shadow:0 8px 28px rgba(160,90,85,0.1); transform:translateX(5px); }
   .day-card.single-col { grid-template-columns: 140px 1fr; }
-
   .day-label { padding:22px 18px; display:flex; flex-direction:column; justify-content:center; }
   .day-card:nth-child(1) .day-label { background:linear-gradient(135deg,#F5E6E0,#EDD6CC); }
   .day-card:nth-child(2) .day-label { background:linear-gradient(135deg,#E8F0E5,#D8E8D2); }
@@ -339,23 +148,18 @@
   .day-card:nth-child(5) .day-label { background:linear-gradient(135deg,#F5E6E0,#EDD6CC); }
   .day-card:nth-child(6) .day-label { background:linear-gradient(135deg,#F5EDDC,#EDE0C8); }
   .day-card:nth-child(7) .day-label { background:linear-gradient(135deg,#EAE4F0,#DDD5EC); }
-
   .day-name { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--warm-brown); }
   .day-focus { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-mid); font-weight:500; margin-top:3px; line-height:1.4; }
-
   .badge { display:inline-block; padding:3px 11px; border-radius:20px; font-size:0.63rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; margin-top:9px; }
   .badge-strength { background:var(--rose); color:var(--deep-rose); }
   .badge-recovery { background:#D8E8D2; color:#5A7A55; }
   .badge-rest { background:#DDD5EC; color:#6A5A8A; }
   .badge-flex { background:var(--light-gold); color:#7A6030; }
-
   .day-section { padding:20px 22px; border-left:1px solid var(--blush); }
   .day-section-label { font-size:0.64rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--text-light); font-weight:600; margin-bottom:10px; }
-
   .day-section ul { list-style:none; display:flex; flex-direction:column; gap:5px; }
   .day-section li { font-size:0.83rem; color:var(--text-mid); display:flex; align-items:flex-start; gap:7px; line-height:1.45; }
   .day-section li::before { content:'·'; color:var(--dusty-rose); font-size:1.3rem; line-height:1; flex-shrink:0; }
-
   .chip { display:inline-block; background:var(--blush); border:1px solid var(--rose); border-radius:8px; padding:4px 11px; font-size:0.77rem; color:var(--deep-rose); margin:2px 3px 2px 0; font-weight:500; }
 
   /* ── EXERCISE CARDS ── */
@@ -369,151 +173,73 @@
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    padding: 24px 22px;
+    text-align: center;
+    align-items: center;
   }
 
   .exercise-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(160,90,85,0.14); border-color:var(--rose); }
 
-  .exercise-ref {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: var(--blush);
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
+  .exercise-day-tag { font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--dusty-rose); font-weight:600; margin-bottom:8px; }
+  .exercise-name { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:600; color:var(--warm-brown); margin-bottom:8px; line-height:1.2; }
+  .exercise-sets { display:inline-flex; align-items:center; gap:6px; background:var(--blush); border-radius:20px; padding:4px 13px; font-size:0.77rem; color:var(--terracotta); font-weight:600; margin-bottom:14px; }
+  .exercise-tip { font-size:0.81rem; color:var(--text-mid); line-height:1.6; font-style:italic; margin-bottom:18px; flex:1; }
 
-  .exercise-ref img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  .exercise-card:hover .exercise-ref img { transform: scale(1.04); }
-
-  .exercise-ref-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(74,50,40,0.55) 0%, transparent 60%);
-  }
-
-  .yt-wrapper {
-    width: 100%;
-    aspect-ratio: 16/9;
-    position: relative;
-    background: #1a0a0a;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-
-  .yt-wrapper iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .yt-label {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-    border-radius: 6px;
-    padding: 3px 9px;
-    font-size: 0.65rem;
+  .ref-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--terracotta), var(--dusty-rose));
     color: white;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.76rem;
     font-weight: 600;
-    z-index: 2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(192,122,114,0.3);
   }
 
-  .exercise-body { padding: 20px 22px; flex: 1; display: flex; flex-direction: column; }
-  .exercise-day-tag { font-size:0.65rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--dusty-rose); font-weight:600; margin-bottom:7px; }
-  .exercise-name { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--warm-brown); margin-bottom:8px; line-height:1.2; }
-  .exercise-sets { display:inline-flex; align-items:center; gap:6px; background:var(--blush); border-radius:20px; padding:4px 13px; font-size:0.77rem; color:var(--terracotta); font-weight:600; margin-bottom:12px; }
-
-  .exercise-tip {
-    font-size: 0.81rem;
-    color: var(--text-mid);
-    line-height: 1.6;
-    padding-top: 12px;
-    border-top: 1px solid var(--blush);
-    font-style: italic;
-    flex: 1;
+  .ref-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(192,122,114,0.4);
+    background: linear-gradient(135deg, var(--deep-rose), var(--terracotta));
   }
+
+  .exercise-divider { width: 40px; height: 1px; background: var(--rose); margin: 0 auto 16px; }
+
+  /* YouTube wrapper stays embedded (it's a video, not a static image) */
+  .yt-wrapper { width: 100%; aspect-ratio: 16/9; position: relative; background: #1a0a0a; overflow: hidden; border-radius: 14px; margin-bottom: 16px; }
+  .yt-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .yt-label { position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.15); backdrop-filter: blur(6px); border-radius: 6px; padding: 3px 9px; font-size: 0.65rem; color: white; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; z-index: 2; }
 
   /* ── BIO CARDS ── */
-  .bio-card {
-    background: var(--white);
-    border: 1px solid var(--blush);
-    border-radius: 20px;
-    padding: 24px 28px;
-    margin-bottom: 12px;
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-    transition: all 0.3s ease;
-  }
-
+  .bio-card { background: var(--white); border: 1px solid var(--blush); border-radius: 20px; padding: 24px 28px; margin-bottom: 12px; display: flex; gap: 18px; align-items: flex-start; transition: all 0.3s ease; }
   .bio-card:hover { border-color:var(--dusty-rose); box-shadow:0 6px 22px rgba(160,90,85,0.1); }
   .bio-icon { width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--rose),var(--dusty-rose)); display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
   .bio-title { font-family:'Cormorant Garamond',serif; font-size:1.08rem; font-weight:600; color:var(--warm-brown); margin-bottom:5px; }
   .bio-desc { font-size:0.83rem; color:var(--text-mid); line-height:1.65; }
 
-  /* ── TRACKER NOTE ── */
-  .tracker-note {
-    background: linear-gradient(135deg,#FDF3EE,#FAE8E0);
-    border: 1px dashed var(--dusty-rose);
-    border-radius: 18px;
-    padding: 24px 28px;
-    text-align: center;
-    margin-top: 8px;
-  }
-
+  .tracker-note { background: linear-gradient(135deg,#FDF3EE,#FAE8E0); border: 1px dashed var(--dusty-rose); border-radius: 18px; padding: 24px 28px; text-align: center; margin-top: 8px; }
   .tracker-note p { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; color:var(--soft-brown); }
   .tracker-note small { font-size:0.78rem; color:var(--text-light); display:block; margin-top:8px; }
 
-  /* ── FOOTER ── */
-  .footer-card {
-    background: linear-gradient(135deg, var(--warm-brown) 0%, var(--soft-brown) 100%);
-    border-radius: 26px;
-    padding: 56px 44px;
-    text-align: center;
-    margin-top: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .footer-card::before {
-    content:'✿';
-    font-size:16rem;
-    color:rgba(255,255,255,0.03);
-    position:absolute;
-    bottom:-50px; right:-30px;
-    line-height:1;
-    pointer-events:none;
-  }
-
+  .footer-card { background: linear-gradient(135deg, var(--warm-brown) 0%, var(--soft-brown) 100%); border-radius: 26px; padding: 56px 44px; text-align: center; margin-top: 20px; position: relative; overflow: hidden; }
+  .footer-card::before { content:'✿'; font-size:16rem; color:rgba(255,255,255,0.03); position:absolute; bottom:-50px; right:-30px; line-height:1; pointer-events:none; }
   .footer-card h2 { font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; color:white; margin-bottom:14px; position:relative; }
   .footer-card h2 em { font-style:italic; color:var(--light-gold); }
   .footer-card p { font-size:0.9rem; color:rgba(255,255,255,0.6); max-width:480px; margin:0 auto; line-height:1.75; position:relative; }
-
   .footer-gems { display:flex; justify-content:center; gap:32px; margin-top:36px; flex-wrap:wrap; position:relative; }
   .gem-stat { text-align:center; }
   .gem-number { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300; color:var(--light-gold); display:block; line-height:1; }
   .gem-label { font-size:0.68rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.12em; margin-top:5px; display:block; }
   .gem-divider { width:1px; background:rgba(255,255,255,0.12); align-self:stretch; margin:4px 0; }
 
-  /* ── ANIMATIONS ── */
   @keyframes fadeDown { from{opacity:0;transform:translateY(-18px)} to{opacity:1;transform:translateY(0)} }
   @keyframes fadeUp   { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 
-  /* ── RESPONSIVE ── */
   @media(max-width:700px){
     .journey-grid{grid-template-columns:1fr;}
     .day-card,.day-card.single-col{grid-template-columns:1fr;}
@@ -527,7 +253,6 @@
 </head>
 <body>
 
-<!-- ── NAV ── -->
 <nav>
   <div class="nav-inner">
     <span class="nav-logo">mein dashboard ✨</span>
@@ -542,21 +267,18 @@
 
 <div class="container">
 
-  <!-- ── HERO ── -->
   <div class="hero">
     <span class="hero-eyebrow">dein persönlicher 12-wochen plan ✨</span>
-    <h1>Home-Workout &<br><em>Glow-Up</em> Dashboard</h1>
+    <h1>Home-Workout &amp;<br><em>Glow-Up</em> Dashboard</h1>
     <p class="hero-sub">Reitsport · Hypertrophie · Ernährung</p>
     <div class="divider"><span>✦</span></div>
   </div>
 
-  <!-- ── AFFIRMATION ── -->
   <div class="affirmation">
-    <p>„Du baust nicht nur Muskeln auf — du baust eine stärkere, selbstbewusstere Version von dir."</p>
-    <small>Deine Transformation beginnt heute — eine Wiederholung nach der anderen</small>
+    <p>„Du baust nicht nur Muskeln auf, du baust eine stärkere, selbstbewusstere Version von dir."</p>
+    <small>Deine Transformation beginnt heute, eine Wiederholung nach der anderen</small>
   </div>
 
-  <!-- ── JOURNEY ── -->
   <div class="section-block" id="journey">
     <p class="section-label">⏳ Deine Reise</p>
     <div class="section-title"><span class="floret">✦</span> Was dich erwartet</div>
@@ -565,24 +287,23 @@
         <div class="journey-week">Woche 1 – 4</div>
         <div class="journey-badge">🌱</div>
         <div class="journey-title">Neurologische Anpassung</div>
-        <div class="journey-desc">Dein Nervensystem lernt die Bewegungen. Du wirst spürbar stärker — Übungen fühlen sich stabiler und kontrollierter an.</div>
+        <div class="journey-desc">Dein Nervensystem lernt die Bewegungen. Du wirst spürbar stärker. Übungen fühlen sich stabiler und kontrollierter an.</div>
       </div>
       <div class="journey-card">
         <div class="journey-week">Woche 4 – 8</div>
         <div class="journey-badge">🌸</div>
         <div class="journey-title">Erste sichtbare Veränderungen</div>
-        <div class="journey-desc">Kleine, aber echte Formveränderungen werden spürbar. Deine Haltung verbessert sich — auch beim Reiten!</div>
+        <div class="journey-desc">Kleine, aber echte Formveränderungen werden spürbar. Deine Haltung verbessert sich, auch beim Reiten!</div>
       </div>
       <div class="journey-card">
         <div class="journey-week">Woche 8 – 12</div>
         <div class="journey-badge">✨</div>
         <div class="journey-title">Sichtbare Hypertrophie</div>
-        <div class="journey-desc">Deutlich sichtbare Veränderungen: Po wächst, Bauch wird definierter. ~0,5 kg/Monat Gewichtszunahme für maximalen Aufbau.</div>
+        <div class="journey-desc">Deutlich sichtbare Veränderungen: Po wächst, Bauch wird definierter. Ca. 0,5 kg/Monat Gewichtszunahme für maximalen Aufbau.</div>
       </div>
     </div>
   </div>
 
-  <!-- ── MACROS ── -->
   <div class="section-block">
     <p class="section-label">🍽️ Tägliche Ziele</p>
     <div class="section-title"><span class="floret">✦</span> Deine Makros</div>
@@ -611,16 +332,15 @@
     </div>
 
     <div class="callout">
-      <div class="callout-title">⏱️ Wichtige Pausenzeiten — bitte nicht überspringen!</div>
+      <div class="callout-title">⏱️ Wichtige Pausenzeiten, bitte nicht überspringen!</div>
       <ul>
         <li>Schwere Bein- &amp; Po-Übungen (RDLs, Hip Thrusts, Split Squats): <strong>90–120 Sek. Pause</strong> zwischen den Sätzen</li>
         <li>Bauch &amp; Isolation (Crunches, Tucks, Clamshells): <strong>60–90 Sek. Pause</strong></li>
-        <li>Einbeinige Übungen: Linkes Bein → 30 Sek. atmen → Rechtes Bein → <strong>90–120 Sek. Pause</strong> → Nächster Satz</li>
+        <li>Einbeinige Übungen: Linkes Bein, 30 Sek. atmen, Rechtes Bein, <strong>90–120 Sek. Pause,</strong> Nächster Satz</li>
       </ul>
     </div>
   </div>
 
-  <!-- ── WEEKLY PLAN ── -->
   <div class="section-block" id="plan">
     <p class="section-label">📅 Wochenplan</p>
     <div class="section-title"><span class="floret">✦</span> Deine Woche auf einen Blick</div>
@@ -658,7 +378,7 @@
         <div class="day-section">
           <div class="day-section-label">💬 Fokus</div>
           <ul>
-            <li>Kein Krafttraining — lass deinen Körper erholen</li>
+            <li>Kein Krafttraining, lass deinen Körper erholen</li>
             <li>Rindfleisch + Quinoa + Brokkoli (Proteinfokus)</li>
             <li>Muskelregeneration bewusst genießen ✨</li>
           </ul>
@@ -696,7 +416,7 @@
         <div class="day-section">
           <div class="day-section-label">💬 Fokus</div>
           <ul>
-            <li>Kein Krafttraining — genieße das Reiten</li>
+            <li>Kein Krafttraining, genieße das Reiten</li>
             <li>Ernährung wie gewohnt beibehalten</li>
             <li>Dein Körper baut gerade auf 🌸</li>
           </ul>
@@ -735,7 +455,7 @@
           <div class="day-section-label">💬 Fokus</div>
           <ul>
             <li>Flexibles, proteinreiches Frühstück</li>
-            <li>Auswärtsessen erlaubt — Fokus auf Protein</li>
+            <li>Auswärtsessen erlaubt, Fokus auf Protein</li>
             <li>Ausweichtag: Training nachholen falls nötig</li>
           </ul>
         </div>
@@ -750,9 +470,9 @@
         <div class="day-section">
           <div class="day-section-label">🥘 Meal Prep</div>
           <ul>
-            <li>Hähnchen &amp; Quinoa für Mo–Mi vorkochen</li>
+            <li>Hähnchen &amp; Quinoa für Mo bis Mi vorkochen</li>
             <li>Magerquark portionieren, Snacks vorbereiten</li>
-            <li>Erhole dich — du hast es verdient ✨</li>
+            <li>Erhole dich, du hast es verdient ✨</li>
           </ul>
         </div>
       </div>
@@ -760,106 +480,77 @@
     </div>
   </div>
 
-  <!-- ── EXERCISES WITH REFERENCES ── -->
+  <!-- ── EXERCISES ── -->
   <div class="section-block" id="uebungen">
     <p class="section-label">🏋️‍♀️ Übungsbibliothek</p>
-    <div class="section-title"><span class="floret">✦</span> Deine Übungen — mit Referenz</div>
+    <div class="section-title"><span class="floret">✦</span> Deine Übungen</div>
     <div class="exercises-grid">
 
-      <!-- 1. Hip Thrusts -->
       <div class="exercise-card">
-        <div class="exercise-ref">
-          <img src="hip-thrusts.png" alt="Einbeinige Sofa-Hip-Thrusts Referenz" loading="lazy">
-          <div class="exercise-ref-overlay"></div>
-        </div>
-        <div class="exercise-body">
-          <div class="exercise-day-tag">Montag · Gluteus Max</div>
-          <div class="exercise-name">Einbeinige Sofa-Hip-Thrusts</div>
-          <div class="exercise-sets">💪 4 × 10–15 / Bein</div>
-          <div class="exercise-tip">Schulterblätter auf die Sofakante. Ein Bein anheben. Durch die Ferse drücken, Kinn zur Brust. Po am Hochpunkt 1–2 Sek. maximal anspannen. Kein Hohlkreuz!</div>
-        </div>
+        <div class="exercise-day-tag">Montag · Gluteus Max</div>
+        <div class="exercise-name">Einbeinige Sofa-Hip-Thrusts</div>
+        <div class="exercise-sets">💪 4 × 10–15 / Bein</div>
+        <div class="exercise-divider"></div>
+        <div class="exercise-tip">Schulterblätter auf die Sofakante. Ein Bein anheben. Durch die Ferse drücken, Kinn zur Brust. Po am Hochpunkt 1–2 Sek. maximal anspannen. Kein Hohlkreuz!</div>
+        <a href="hip-thrusts.png" target="_blank" rel="noopener" class="ref-btn">📷 Referenz ansehen</a>
       </div>
 
-      <!-- 2. Reverse Crunches -->
       <div class="exercise-card">
-        <div class="exercise-ref">
-          <img src="reverse-crunches.png" alt="Reverse Crunches am Boden Referenz" loading="lazy">
-          <div class="exercise-ref-overlay"></div>
-        </div>
-        <div class="exercise-body">
-          <div class="exercise-day-tag">Montag · Rumpf</div>
-          <div class="exercise-name">Reverse Crunches am Boden</div>
-          <div class="exercise-sets">💪 3 × 15–20</div>
-          <div class="exercise-tip">Hüftbeuger vorher aktiv dehnen — das Reiten verkürzt sie, sonst stehlen sie die Spannung von deinen Bauchmuskeln. Beine kontrolliert zur Brust ziehen.</div>
-        </div>
+        <div class="exercise-day-tag">Montag · Rumpf</div>
+        <div class="exercise-name">Reverse Crunches am Boden</div>
+        <div class="exercise-sets">💪 3 × 15–20</div>
+        <div class="exercise-divider"></div>
+        <div class="exercise-tip">Hüftbeuger vorher aktiv dehnen. Das Reiten verkürzt sie, sonst stehlen sie die Spannung von deinen Bauchmuskeln. Beine kontrolliert zur Brust ziehen.</div>
+        <a href="reverse-crunches.png" target="_blank" rel="noopener" class="ref-btn">📷 Referenz ansehen</a>
       </div>
 
-      <!-- 3. Clamshells -->
       <div class="exercise-card">
-        <div class="exercise-ref">
-          <img src="clamshells.png" alt="Banded Clamshells Referenz" loading="lazy">
-          <div class="exercise-ref-overlay"></div>
-        </div>
-        <div class="exercise-body">
-          <div class="exercise-day-tag">Mittwoch · Gluteus Medius</div>
-          <div class="exercise-name">Banded Clamshells</div>
-          <div class="exercise-sets">💪 3 × 15–20 / Bein</div>
-          <div class="exercise-tip">Stoffband um die Oberschenkel. Langsame, kontrollierte Bewegung — spüre die seitliche Gesäßmuskulatur. Entscheidend für deine Reitstabilität.</div>
-        </div>
+        <div class="exercise-day-tag">Mittwoch · Gluteus Medius</div>
+        <div class="exercise-name">Banded Clamshells</div>
+        <div class="exercise-sets">💪 3 × 15–20 / Bein</div>
+        <div class="exercise-divider"></div>
+        <div class="exercise-tip">Stoffband um die Oberschenkel. Langsame, kontrollierte Bewegung. Spüre die seitliche Gesäßmuskulatur. Entscheidend für deine Reitstabilität.</div>
+        <a href="clamshells.png" target="_blank" rel="noopener" class="ref-btn">📷 Referenz ansehen</a>
       </div>
 
-      <!-- 4. Floor Tucks — YouTube -->
       <div class="exercise-card">
+        <div class="exercise-day-tag">Mittwoch · Obliques</div>
+        <div class="exercise-name">Gleitende Floor Tucks</div>
+        <div class="exercise-sets">💪 3 × 12–15</div>
+        <div class="exercise-divider"></div>
         <div class="yt-wrapper">
           <span class="yt-label">🎥 Video-Demo</span>
           <iframe
             src="https://www.youtube.com/embed/ViOihbu9BAA?rel=0&modestbranding=1"
             title="Gleitende Floor Tucks Demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
+            allowfullscreen loading="lazy">
           </iframe>
         </div>
-        <div class="exercise-body">
-          <div class="exercise-day-tag">Mittwoch · Obliques</div>
-          <div class="exercise-name">Gleitende Floor Tucks</div>
-          <div class="exercise-sets">💪 3 × 12–15</div>
-          <div class="exercise-tip">Liegestützposition auf Socken (glatter Boden). Knie zur Brust durch Bauchanspannung. Hüfte leicht anheben — dann <em>3 Sek.</em> kontrolliert zurück gleiten.</div>
-        </div>
+        <div class="exercise-tip">Liegestützposition auf Socken (glatter Boden). Knie zur Brust durch Bauchanspannung. Hüfte leicht anheben, dann <em>3 Sek.</em> kontrolliert zurück gleiten.</div>
       </div>
 
-      <!-- 5. RDLs -->
       <div class="exercise-card">
-        <div class="exercise-ref">
-          <img src="rdls.png" alt="Rucksack RDLs Referenz" loading="lazy">
-          <div class="exercise-ref-overlay"></div>
-        </div>
-        <div class="exercise-body">
-          <div class="exercise-day-tag">Freitag · Hintere Kette</div>
-          <div class="exercise-name">Rucksack / Kurzhantel RDLs</div>
-          <div class="exercise-sets">💪 3 × 12–15</div>
-          <div class="exercise-tip">Hüfte nach hinten schieben, nicht bücken. Rücken gerade, Knie leicht gebeugt. Die Dehnung in den Hamstrings ist dein Signal — das ist perfekt.</div>
-        </div>
+        <div class="exercise-day-tag">Freitag · Hintere Kette</div>
+        <div class="exercise-name">Rucksack / Kurzhantel RDLs</div>
+        <div class="exercise-sets">💪 3 × 12–15</div>
+        <div class="exercise-divider"></div>
+        <div class="exercise-tip">Hüfte nach hinten schieben, nicht bücken. Rücken gerade, Knie leicht gebeugt. Die Dehnung in den Hamstrings ist dein Signal, das ist perfekt.</div>
+        <a href="rdls.png" target="_blank" rel="noopener" class="ref-btn">📷 Referenz ansehen</a>
       </div>
 
-      <!-- 6. Bulgarian Split Squats -->
       <div class="exercise-card">
-        <div class="exercise-ref">
-          <img src="split-squats.png" alt="Bulgarian Split Squats Referenz" loading="lazy">
-          <div class="exercise-ref-overlay"></div>
-        </div>
-        <div class="exercise-body">
-          <div class="exercise-day-tag">Freitag · Hintere Kette</div>
-          <div class="exercise-name">Glute-Fokus Bulgarian Split Squats</div>
-          <div class="exercise-sets">💪 3 × 8–12 / Bein</div>
-          <div class="exercise-tip">Hinterer Fuß auf dem Sofa. Torso leicht nach vorne lehnen für maximale Glute-Aktivierung. Kontrolliert runter — explosiv hoch.</div>
-        </div>
+        <div class="exercise-day-tag">Freitag · Hintere Kette</div>
+        <div class="exercise-name">Glute-Fokus Bulgarian Split Squats</div>
+        <div class="exercise-sets">💪 3 × 8–12 / Bein</div>
+        <div class="exercise-divider"></div>
+        <div class="exercise-tip">Hinterer Fuß auf dem Sofa. Torso leicht nach vorne lehnen für maximale Glute-Aktivierung. Kontrolliert runter, explosiv hoch.</div>
+        <a href="split-squats.png" target="_blank" rel="noopener" class="ref-btn">📷 Referenz ansehen</a>
       </div>
 
     </div>
   </div>
 
-  <!-- ── BIOMECHANICS ── -->
   <div class="section-block" id="hinweise">
     <p class="section-label">📐 Ausführung &amp; Form</p>
     <div class="section-title"><span class="floret">✦</span> Biomechanische Hinweise</div>
@@ -867,42 +558,40 @@
     <div class="bio-card">
       <div class="bio-icon">🐴</div>
       <div>
-        <div class="bio-title">Der „Reiter-Tuck" — immer zuerst dehnen</div>
-        <div class="bio-desc">Dehne vor jedem Bauchtraining aktiv deine Hüftbeuger. Das Reiten verkürzt sie chronisch — ohne Dehnung stehlen sie beim Bauchtraining die Spannung und deine Ergebnisse leiden erheblich darunter.</div>
+        <div class="bio-title">Der "Reiter-Tuck" immer zuerst dehnen</div>
+        <div class="bio-desc">Dehne vor jedem Bauchtraining aktiv deine Hüftbeuger. Das Reiten verkürzt sie chronisch. Ohne Dehnung stehlen sie beim Bauchtraining die Spannung und deine Ergebnisse leiden erheblich darunter.</div>
       </div>
     </div>
 
     <div class="bio-card">
       <div class="bio-icon">✨</div>
       <div>
-        <div class="bio-title">Gleitende Floor Tucks — die negative Phase zählt</div>
-        <div class="bio-desc">Liegestützposition auf Socken (glatter Boden). Knie durch Bauchanspannung zur Brust — Hüfte leicht anheben. Dann <em>3 Sekunden lang</em> kontrolliert zurückgleiten. Die negative Phase macht den entscheidenden Unterschied!</div>
+        <div class="bio-title">Gleitende Floor Tucks: die negative Phase zählt</div>
+        <div class="bio-desc">Liegestützposition auf Socken (glatter Boden). Knie durch Bauchanspannung zur Brust, Hüfte leicht anheben. Dann <em>3 Sekunden lang</em> kontrolliert zurückgleiten. Die negative Phase macht den entscheidenden Unterschied!</div>
       </div>
     </div>
 
     <div class="bio-card">
       <div class="bio-icon">💪</div>
       <div>
-        <div class="bio-title">Hip Thrusts — maximale Po-Aktivierung</div>
-        <div class="bio-desc">Schulterblätter fest auf die Sofakante. Kinn Richtung Brust — das schützt die Lendenwirbelsäule. Durch die Ferse drücken. Am Hochpunkt den Po 1–2 Sekunden maximal anspannen. <strong>Hohlkreuz unbedingt vermeiden!</strong></div>
+        <div class="bio-title">Hip Thrusts: maximale Po-Aktivierung</div>
+        <div class="bio-desc">Schulterblätter fest auf die Sofakante. Kinn Richtung Brust, das schützt die Lendenwirbelsäule. Durch die Ferse drücken. Am Hochpunkt den Po 1–2 Sekunden maximal anspannen. <strong>Hohlkreuz unbedingt vermeiden!</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- ── TRACKER NOTE ── -->
   <div class="section-block">
     <p class="section-label">📊 Progressive Überlastung</p>
     <div class="section-title"><span class="floret">✦</span> Fortschritt tracken</div>
     <div class="tracker-note">
       <p>Notiere jede Woche dein Gewicht, Widerstandsband und deine Wiederholungszahl.</p>
-      <small>Progressive Überlastung ist das Herzstück deiner Transformation — jede kleine Steigerung zählt. Konsistenz schlägt Perfektion, jedes Mal. 🌸</small>
+      <small>Progressive Überlastung ist das Herzstück deiner Transformation. Jede kleine Steigerung zählt. Konsistenz schlägt Perfektion, jedes Mal. 🌸</small>
     </div>
   </div>
 
-  <!-- ── FOOTER ── -->
   <div class="footer-card">
     <h2>Du bist <em>stärker</em>,<br>als du glaubst.</h2>
-    <p>Jede Wiederholung, jede Mahlzeit, jede Reitstunde — das alles baut dich auf. Bleib dran, feiere kleine Fortschritte, und vertraue dem Prozess.</p>
+    <p>Jede Wiederholung, jede Mahlzeit, jede Reitstunde. Das alles baut dich auf. Bleib dran, feiere kleine Fortschritte und vertraue dem Prozess.</p>
     <div class="footer-gems">
       <div class="gem-stat">
         <span class="gem-number">3×</span>
