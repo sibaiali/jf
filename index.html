@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>âœ¨ Mein Glow-Up Dashboard</title>
+<title>✨ Mein Glow-Up Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Petit+Formal+Script&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -48,7 +48,7 @@
     z-index: 0;
   }
 
-  /* â”€â”€ NAV â”€â”€ */
+  /* ── NAV ── */
   nav {
     position: sticky;
     top: 0;
@@ -93,7 +93,7 @@
 
   .nav-links a:hover { color: var(--terracotta); }
 
-  /* â”€â”€ CONTAINER â”€â”€ */
+  /* ── CONTAINER ── */
   .container {
     max-width: 960px;
     margin: 0 auto;
@@ -102,7 +102,7 @@
     z-index: 1;
   }
 
-  /* â”€â”€ HERO â”€â”€ */
+  /* ── HERO ── */
   .hero {
     text-align: center;
     padding: 72px 0 52px;
@@ -153,7 +153,7 @@
 
   .divider span { color: var(--dusty-rose); font-size: 0.9rem; }
 
-  /* â”€â”€ AFFIRMATION â”€â”€ */
+  /* ── AFFIRMATION ── */
   .affirmation {
     background: linear-gradient(135deg, var(--terracotta) 0%, var(--dusty-rose) 65%, #D4A090 100%);
     border-radius: 22px;
@@ -167,7 +167,7 @@
   }
 
   .affirmation::before {
-    content: 'â';
+    content: '❝';
     font-family: 'Cormorant Garamond', serif;
     font-size: 7rem;
     color: rgba(255,255,255,0.08);
@@ -195,7 +195,7 @@
     margin-top: 10px;
   }
 
-  /* â”€â”€ SECTION HEADERS â”€â”€ */
+  /* ── SECTION HEADERS ── */
   .section-block { margin-bottom: 60px; }
 
   .section-label {
@@ -220,7 +220,7 @@
 
   .floret { color: var(--dusty-rose); font-size: 0.85rem; }
 
-  /* â”€â”€ JOURNEY CARDS â”€â”€ */
+  /* ── JOURNEY CARDS ── */
   .journey-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -260,7 +260,7 @@
   .journey-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--warm-brown); margin-bottom:7px; }
   .journey-desc { font-size:0.82rem; color:var(--text-mid); line-height:1.6; }
 
-  /* â”€â”€ MACROS â”€â”€ */
+  /* ── MACROS ── */
   .macros-row { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px; }
 
   .macro-pill {
@@ -281,7 +281,7 @@
   .macro-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-light); font-weight:600; display:block; }
   .macro-value { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--warm-brown); font-weight:600; line-height:1; }
 
-  /* â”€â”€ CALLOUT â”€â”€ */
+  /* ── CALLOUT ── */
   .callout {
     background: linear-gradient(135deg,#FDF0EB,#FAE8E0);
     border: 1.5px solid var(--rose);
@@ -313,9 +313,9 @@
     line-height: 1.5;
   }
 
-  .callout li::before { content:'âœ¦'; color:var(--dusty-rose); font-size:0.58rem; margin-top:6px; flex-shrink:0; }
+  .callout li::before { content:'✦'; color:var(--dusty-rose); font-size:0.58rem; margin-top:6px; flex-shrink:0; }
 
-  /* â”€â”€ WEEK GRID â”€â”€ */
+  /* ── WEEK GRID ── */
   .week-grid { display:grid; gap:12px; }
 
   .day-card {
@@ -354,11 +354,11 @@
 
   .day-section ul { list-style:none; display:flex; flex-direction:column; gap:5px; }
   .day-section li { font-size:0.83rem; color:var(--text-mid); display:flex; align-items:flex-start; gap:7px; line-height:1.45; }
-  .day-section li::before { content:'Â·'; color:var(--dusty-rose); font-size:1.3rem; line-height:1; flex-shrink:0; }
+  .day-section li::before { content:'·'; color:var(--dusty-rose); font-size:1.3rem; line-height:1; flex-shrink:0; }
 
   .chip { display:inline-block; background:var(--blush); border:1px solid var(--rose); border-radius:8px; padding:4px 11px; font-size:0.77rem; color:var(--deep-rose); margin:2px 3px 2px 0; font-weight:500; }
 
-  /* â”€â”€ EXERCISE CARDS with Reference â”€â”€ */
+  /* ── EXERCISE CARDS ── */
   .exercises-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(290px,1fr)); gap:20px; margin-top:8px; }
 
   .exercise-card {
@@ -373,7 +373,6 @@
 
   .exercise-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(160,90,85,0.14); border-color:var(--rose); }
 
-  /* Reference image / video area */
   .exercise-ref {
     width: 100%;
     aspect-ratio: 16/9;
@@ -400,7 +399,6 @@
     background: linear-gradient(to top, rgba(74,50,40,0.55) 0%, transparent 60%);
   }
 
-  /* YouTube embed wrapper */
   .yt-wrapper {
     width: 100%;
     aspect-ratio: 16/9;
@@ -449,7 +447,7 @@
     flex: 1;
   }
 
-  /* â”€â”€ BIO CARDS â”€â”€ */
+  /* ── BIO CARDS ── */
   .bio-card {
     background: var(--white);
     border: 1px solid var(--blush);
@@ -467,7 +465,7 @@
   .bio-title { font-family:'Cormorant Garamond',serif; font-size:1.08rem; font-weight:600; color:var(--warm-brown); margin-bottom:5px; }
   .bio-desc { font-size:0.83rem; color:var(--text-mid); line-height:1.65; }
 
-  /* â”€â”€ TRACKER NOTE â”€â”€ */
+  /* ── TRACKER NOTE ── */
   .tracker-note {
     background: linear-gradient(135deg,#FDF3EE,#FAE8E0);
     border: 1px dashed var(--dusty-rose);
@@ -480,7 +478,7 @@
   .tracker-note p { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; color:var(--soft-brown); }
   .tracker-note small { font-size:0.78rem; color:var(--text-light); display:block; margin-top:8px; }
 
-  /* â”€â”€ FOOTER â”€â”€ */
+  /* ── FOOTER ── */
   .footer-card {
     background: linear-gradient(135deg, var(--warm-brown) 0%, var(--soft-brown) 100%);
     border-radius: 26px;
@@ -492,7 +490,7 @@
   }
 
   .footer-card::before {
-    content:'âœ¿';
+    content:'✿';
     font-size:16rem;
     color:rgba(255,255,255,0.03);
     position:absolute;
@@ -511,11 +509,11 @@
   .gem-label { font-size:0.68rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.12em; margin-top:5px; display:block; }
   .gem-divider { width:1px; background:rgba(255,255,255,0.12); align-self:stretch; margin:4px 0; }
 
-  /* â”€â”€ ANIMATIONS â”€â”€ */
+  /* ── ANIMATIONS ── */
   @keyframes fadeDown { from{opacity:0;transform:translateY(-18px)} to{opacity:1;transform:translateY(0)} }
   @keyframes fadeUp   { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 
-  /* â”€â”€ RESPONSIVE â”€â”€ */
+  /* ── RESPONSIVE ── */
   @media(max-width:700px){
     .journey-grid{grid-template-columns:1fr;}
     .day-card,.day-card.single-col{grid-template-columns:1fr;}
@@ -529,14 +527,14 @@
 </head>
 <body>
 
-<!-- â”€â”€ NAV â”€â”€ -->
+<!-- ── NAV ── -->
 <nav>
   <div class="nav-inner">
-    <span class="nav-logo">mein dashboard âœ¨</span>
+    <span class="nav-logo">mein dashboard ✨</span>
     <ul class="nav-links">
       <li><a href="#journey">Reise</a></li>
       <li><a href="#plan">Wochenplan</a></li>
-      <li><a href="#uebungen">Ãœbungen</a></li>
+      <li><a href="#uebungen">Übungen</a></li>
       <li><a href="#hinweise">Form-Tipps</a></li>
     </ul>
   </div>
@@ -544,67 +542,67 @@
 
 <div class="container">
 
-  <!-- â”€â”€ HERO â”€â”€ -->
+  <!-- ── HERO ── -->
   <div class="hero">
-    <span class="hero-eyebrow">dein persÃ¶nlicher 12-wochen plan âœ¨</span>
+    <span class="hero-eyebrow">dein persönlicher 12-wochen plan ✨</span>
     <h1>Home-Workout &<br><em>Glow-Up</em> Dashboard</h1>
-    <p class="hero-sub">Reitsport Â· Hypertrophie Â· ErnÃ¤hrung</p>
-    <div class="divider"><span>âœ¦</span></div>
+    <p class="hero-sub">Reitsport · Hypertrophie · Ernährung</p>
+    <div class="divider"><span>✦</span></div>
   </div>
 
-  <!-- â”€â”€ AFFIRMATION â”€â”€ -->
+  <!-- ── AFFIRMATION ── -->
   <div class="affirmation">
-    <p>â€žDu baust nicht nur Muskeln auf â€” du baust eine stÃ¤rkere, selbstbewusstere Version von dir."</p>
-    <small>Deine Transformation beginnt heute â€” eine Wiederholung nach der anderen</small>
+    <p>„Du baust nicht nur Muskeln auf — du baust eine stärkere, selbstbewusstere Version von dir."</p>
+    <small>Deine Transformation beginnt heute — eine Wiederholung nach der anderen</small>
   </div>
 
-  <!-- â”€â”€ JOURNEY â”€â”€ -->
+  <!-- ── JOURNEY ── -->
   <div class="section-block" id="journey">
-    <p class="section-label">â³ Deine Reise</p>
-    <div class="section-title"><span class="floret">âœ¦</span> Was dich erwartet</div>
+    <p class="section-label">⏳ Deine Reise</p>
+    <div class="section-title"><span class="floret">✦</span> Was dich erwartet</div>
     <div class="journey-grid">
       <div class="journey-card">
-        <div class="journey-week">Woche 1 â€“ 4</div>
-        <div class="journey-badge">ðŸŒ±</div>
+        <div class="journey-week">Woche 1 – 4</div>
+        <div class="journey-badge">🌱</div>
         <div class="journey-title">Neurologische Anpassung</div>
-        <div class="journey-desc">Dein Nervensystem lernt die Bewegungen. Du wirst spÃ¼rbar stÃ¤rker â€” Ãœbungen fÃ¼hlen sich stabiler und kontrollierter an.</div>
+        <div class="journey-desc">Dein Nervensystem lernt die Bewegungen. Du wirst spürbar stärker — Übungen fühlen sich stabiler und kontrollierter an.</div>
       </div>
       <div class="journey-card">
-        <div class="journey-week">Woche 4 â€“ 8</div>
-        <div class="journey-badge">ðŸŒ¸</div>
-        <div class="journey-title">Erste sichtbare VerÃ¤nderungen</div>
-        <div class="journey-desc">Kleine, aber echte FormverÃ¤nderungen werden spÃ¼rbar. Deine Haltung verbessert sich â€” auch beim Reiten!</div>
+        <div class="journey-week">Woche 4 – 8</div>
+        <div class="journey-badge">🌸</div>
+        <div class="journey-title">Erste sichtbare Veränderungen</div>
+        <div class="journey-desc">Kleine, aber echte Formveränderungen werden spürbar. Deine Haltung verbessert sich — auch beim Reiten!</div>
       </div>
       <div class="journey-card">
-        <div class="journey-week">Woche 8 â€“ 12</div>
-        <div class="journey-badge">âœ¨</div>
+        <div class="journey-week">Woche 8 – 12</div>
+        <div class="journey-badge">✨</div>
         <div class="journey-title">Sichtbare Hypertrophie</div>
-        <div class="journey-desc">Deutlich sichtbare VerÃ¤nderungen: Po wÃ¤chst, Bauch wird definierter. ~0,5 kg/Monat Gewichtszunahme fÃ¼r maximalen Aufbau.</div>
+        <div class="journey-desc">Deutlich sichtbare Veränderungen: Po wächst, Bauch wird definierter. ~0,5 kg/Monat Gewichtszunahme für maximalen Aufbau.</div>
       </div>
     </div>
   </div>
 
-  <!-- â”€â”€ MACROS â”€â”€ -->
+  <!-- ── MACROS ── -->
   <div class="section-block">
-    <p class="section-label">ðŸ½ï¸ TÃ¤gliche Ziele</p>
-    <div class="section-title"><span class="floret">âœ¦</span> Deine Makros</div>
+    <p class="section-label">🍽️ Tägliche Ziele</p>
+    <div class="section-title"><span class="floret">✦</span> Deine Makros</div>
     <div class="macros-row">
       <div class="macro-pill">
-        <span class="macro-icon">ðŸ”¥</span>
+        <span class="macro-icon">🔥</span>
         <div>
           <span class="macro-label">Kalorien / Tag</span>
           <span class="macro-value">~2.450 kcal</span>
         </div>
       </div>
       <div class="macro-pill">
-        <span class="macro-icon">ðŸ’ª</span>
+        <span class="macro-icon">💪</span>
         <div>
           <span class="macro-label">Protein / Tag</span>
-          <span class="macro-value">115 â€“ 125 g</span>
+          <span class="macro-value">115 – 125 g</span>
         </div>
       </div>
       <div class="macro-pill">
-        <span class="macro-icon">ðŸ“ˆ</span>
+        <span class="macro-icon">📈</span>
         <div>
           <span class="macro-label">Gewichtszunahme</span>
           <span class="macro-value">~0,5 kg / Monat</span>
@@ -613,41 +611,41 @@
     </div>
 
     <div class="callout">
-      <div class="callout-title">â±ï¸ Wichtige Pausenzeiten â€” bitte nicht Ã¼berspringen!</div>
+      <div class="callout-title">⏱️ Wichtige Pausenzeiten — bitte nicht überspringen!</div>
       <ul>
-        <li>Schwere Bein- & Po-Ãœbungen (RDLs, Hip Thrusts, Split Squats): <strong>90â€“120 Sek. Pause</strong> zwischen den SÃ¤tzen</li>
-        <li>Bauch & Isolation (Crunches, Tucks, Clamshells): <strong>60â€“90 Sek. Pause</strong></li>
-        <li>Einbeinige Ãœbungen: Linkes Bein â†’ 30 Sek. atmen â†’ Rechtes Bein â†’ <strong>90â€“120 Sek. Pause</strong> â†’ NÃ¤chster Satz</li>
+        <li>Schwere Bein- &amp; Po-Übungen (RDLs, Hip Thrusts, Split Squats): <strong>90–120 Sek. Pause</strong> zwischen den Sätzen</li>
+        <li>Bauch &amp; Isolation (Crunches, Tucks, Clamshells): <strong>60–90 Sek. Pause</strong></li>
+        <li>Einbeinige Übungen: Linkes Bein → 30 Sek. atmen → Rechtes Bein → <strong>90–120 Sek. Pause</strong> → Nächster Satz</li>
       </ul>
     </div>
   </div>
 
-  <!-- â”€â”€ WEEKLY PLAN â”€â”€ -->
+  <!-- ── WEEKLY PLAN ── -->
   <div class="section-block" id="plan">
-    <p class="section-label">ðŸ“… Wochenplan</p>
-    <div class="section-title"><span class="floret">âœ¦</span> Deine Woche auf einen Blick</div>
+    <p class="section-label">📅 Wochenplan</p>
+    <div class="section-title"><span class="floret">✦</span> Deine Woche auf einen Blick</div>
     <div class="week-grid">
 
       <div class="day-card">
         <div class="day-label">
           <div class="day-name">Mo</div>
-          <div class="day-focus">Gluteus Max & Rumpf</div>
+          <div class="day-focus">Gluteus Max &amp; Rumpf</div>
           <span class="badge badge-strength">Kraft</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ² ErnÃ¤hrung</div>
+          <div class="day-section-label">🍲 Ernährung</div>
           <ul>
             <li>60g Haferflocken + 150g Skyr</li>
-            <li>150g HÃ¤hnchen + 200g Kartoffeln</li>
-            <li>Vollkornbrot + HÃ¼ttenkÃ¤se</li>
+            <li>150g Hähnchen + 200g Kartoffeln</li>
+            <li>Vollkornbrot + Hüttenkäse</li>
             <li>150g Lachs + Quinoa</li>
             <li><em>(Opt.) 100g Magerquark</em></li>
           </ul>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ‹ï¸â€â™€ï¸ Training</div>
-          <span class="chip">Hip Thrusts 4Ã—10-15/Bein</span>
-          <span class="chip">Reverse Crunches 3Ã—15-20</span>
+          <div class="day-section-label">🏋️‍♀️ Training</div>
+          <span class="chip">Hip Thrusts 4×10-15/Bein</span>
+          <span class="chip">Reverse Crunches 3×15-20</span>
         </div>
       </div>
 
@@ -655,14 +653,14 @@
         <div class="day-label">
           <div class="day-name">Di</div>
           <div class="day-focus">Aktive Erholung</div>
-          <span class="badge badge-recovery">Reiten ðŸ´</span>
+          <span class="badge badge-recovery">Reiten 🐴</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ’¬ Fokus</div>
+          <div class="day-section-label">💬 Fokus</div>
           <ul>
-            <li>Kein Krafttraining â€” lass deinen KÃ¶rper erholen</li>
+            <li>Kein Krafttraining — lass deinen Körper erholen</li>
             <li>Rindfleisch + Quinoa + Brokkoli (Proteinfokus)</li>
-            <li>Muskelregeneration bewusst genieÃŸen âœ¨</li>
+            <li>Muskelregeneration bewusst genießen ✨</li>
           </ul>
         </div>
       </div>
@@ -670,22 +668,22 @@
       <div class="day-card">
         <div class="day-label">
           <div class="day-name">Mi</div>
-          <div class="day-focus">Glut. Medius & Obliques</div>
+          <div class="day-focus">Glut. Medius &amp; Obliques</div>
           <span class="badge badge-strength">Kraft</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ² ErnÃ¤hrung</div>
+          <div class="day-section-label">🍲 Ernährung</div>
           <ul>
             <li>60g Haferflocken + 150g Skyr</li>
-            <li>150g HÃ¤hnchen + 200g Kartoffeln</li>
-            <li>Vollkornbrot + HÃ¼ttenkÃ¤se</li>
+            <li>150g Hähnchen + 200g Kartoffeln</li>
+            <li>Vollkornbrot + Hüttenkäse</li>
             <li>150g Lachs + Quinoa</li>
           </ul>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ‹ï¸â€â™€ï¸ Training</div>
-          <span class="chip">Banded Clamshells 3Ã—15-20/Bein</span>
-          <span class="chip">Floor Tucks 3Ã—12-15</span>
+          <div class="day-section-label">🏋️‍♀️ Training</div>
+          <span class="chip">Banded Clamshells 3×15-20/Bein</span>
+          <span class="chip">Floor Tucks 3×12-15</span>
         </div>
       </div>
 
@@ -693,14 +691,14 @@
         <div class="day-label">
           <div class="day-name">Do</div>
           <div class="day-focus">Aktive Erholung</div>
-          <span class="badge badge-recovery">Reiten ðŸ´</span>
+          <span class="badge badge-recovery">Reiten 🐴</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ’¬ Fokus</div>
+          <div class="day-section-label">💬 Fokus</div>
           <ul>
-            <li>Kein Krafttraining â€” genieÃŸe das Reiten</li>
-            <li>ErnÃ¤hrung wie gewohnt beibehalten</li>
-            <li>Dein KÃ¶rper baut gerade auf ðŸŒ¸</li>
+            <li>Kein Krafttraining — genieße das Reiten</li>
+            <li>Ernährung wie gewohnt beibehalten</li>
+            <li>Dein Körper baut gerade auf 🌸</li>
           </ul>
         </div>
       </div>
@@ -712,33 +710,33 @@
           <span class="badge badge-strength">Kraft</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ² ErnÃ¤hrung</div>
+          <div class="day-section-label">🍲 Ernährung</div>
           <ul>
             <li>60g Haferflocken + 150g Skyr</li>
-            <li>150g HÃ¤hnchen + 200g Kartoffeln</li>
-            <li>Vollkornbrot + HÃ¼ttenkÃ¤se</li>
+            <li>150g Hähnchen + 200g Kartoffeln</li>
+            <li>Vollkornbrot + Hüttenkäse</li>
             <li>150g Lachs + Quinoa</li>
           </ul>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ‹ï¸â€â™€ï¸ Training</div>
-          <span class="chip">Rucksack-RDLs 3Ã—12-15</span>
-          <span class="chip">Bulgarian Split Squats 3Ã—8-12/Bein</span>
+          <div class="day-section-label">🏋️‍♀️ Training</div>
+          <span class="chip">Rucksack-RDLs 3×12-15</span>
+          <span class="chip">Bulgarian Split Squats 3×8-12/Bein</span>
         </div>
       </div>
 
       <div class="day-card single-col">
         <div class="day-label">
           <div class="day-name">Sa</div>
-          <div class="day-focus">Familie Â· Flex</div>
+          <div class="day-focus">Familie · Flex</div>
           <span class="badge badge-flex">Flexibel</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ’¬ Fokus</div>
+          <div class="day-section-label">💬 Fokus</div>
           <ul>
-            <li>Flexibles, proteinreiches FrÃ¼hstÃ¼ck</li>
-            <li>AuswÃ¤rtsessen erlaubt â€” Fokus auf Protein</li>
-            <li>Ausweichtag: Training nachholen falls nÃ¶tig</li>
+            <li>Flexibles, proteinreiches Frühstück</li>
+            <li>Auswärtsessen erlaubt — Fokus auf Protein</li>
+            <li>Ausweichtag: Training nachholen falls nötig</li>
           </ul>
         </div>
       </div>
@@ -746,15 +744,15 @@
       <div class="day-card single-col">
         <div class="day-label">
           <div class="day-name">So</div>
-          <div class="day-focus">Familie Â· Meal Prep</div>
-          <span class="badge badge-rest">Ruhetag ðŸ’œ</span>
+          <div class="day-focus">Familie · Meal Prep</div>
+          <span class="badge badge-rest">Ruhetag 💜</span>
         </div>
         <div class="day-section">
-          <div class="day-section-label">ðŸ¥˜ Meal Prep</div>
+          <div class="day-section-label">🥘 Meal Prep</div>
           <ul>
-            <li>HÃ¤hnchen & Quinoa fÃ¼r Moâ€“Mi vorkochen</li>
+            <li>Hähnchen &amp; Quinoa für Mo–Mi vorkochen</li>
             <li>Magerquark portionieren, Snacks vorbereiten</li>
-            <li>Erhole dich â€” du hast es verdient âœ¨</li>
+            <li>Erhole dich — du hast es verdient ✨</li>
           </ul>
         </div>
       </div>
@@ -762,10 +760,10 @@
     </div>
   </div>
 
-  <!-- â”€â”€ EXERCISES WITH REFERENCES â”€â”€ -->
+  <!-- ── EXERCISES WITH REFERENCES ── -->
   <div class="section-block" id="uebungen">
-    <p class="section-label">ðŸ‹ï¸â€â™€ï¸ Ãœbungsbibliothek</p>
-    <div class="section-title"><span class="floret">âœ¦</span> Deine Ãœbungen â€” mit Referenz</div>
+    <p class="section-label">🏋️‍♀️ Übungsbibliothek</p>
+    <div class="section-title"><span class="floret">✦</span> Deine Übungen — mit Referenz</div>
     <div class="exercises-grid">
 
       <!-- 1. Hip Thrusts -->
@@ -775,10 +773,10 @@
           <div class="exercise-ref-overlay"></div>
         </div>
         <div class="exercise-body">
-          <div class="exercise-day-tag">Montag Â· Gluteus Max</div>
+          <div class="exercise-day-tag">Montag · Gluteus Max</div>
           <div class="exercise-name">Einbeinige Sofa-Hip-Thrusts</div>
-          <div class="exercise-sets">ðŸ’ª 4 Ã— 10â€“15 / Bein</div>
-          <div class="exercise-tip">SchulterblÃ¤tter auf die Sofakante. Ein Bein anheben. Durch die Ferse drÃ¼cken, Kinn zur Brust. Po am Hochpunkt 1â€“2 Sek. maximal anspannen. Kein Hohlkreuz!</div>
+          <div class="exercise-sets">💪 4 × 10–15 / Bein</div>
+          <div class="exercise-tip">Schulterblätter auf die Sofakante. Ein Bein anheben. Durch die Ferse drücken, Kinn zur Brust. Po am Hochpunkt 1–2 Sek. maximal anspannen. Kein Hohlkreuz!</div>
         </div>
       </div>
 
@@ -789,10 +787,10 @@
           <div class="exercise-ref-overlay"></div>
         </div>
         <div class="exercise-body">
-          <div class="exercise-day-tag">Montag Â· Rumpf</div>
+          <div class="exercise-day-tag">Montag · Rumpf</div>
           <div class="exercise-name">Reverse Crunches am Boden</div>
-          <div class="exercise-sets">ðŸ’ª 3 Ã— 15â€“20</div>
-          <div class="exercise-tip">HÃ¼ftbeuger vorher aktiv dehnen â€” das Reiten verkÃ¼rzt sie, sonst stehlen sie die Spannung von deinen Bauchmuskeln. Beine kontrolliert zur Brust ziehen.</div>
+          <div class="exercise-sets">💪 3 × 15–20</div>
+          <div class="exercise-tip">Hüftbeuger vorher aktiv dehnen — das Reiten verkürzt sie, sonst stehlen sie die Spannung von deinen Bauchmuskeln. Beine kontrolliert zur Brust ziehen.</div>
         </div>
       </div>
 
@@ -803,17 +801,17 @@
           <div class="exercise-ref-overlay"></div>
         </div>
         <div class="exercise-body">
-          <div class="exercise-day-tag">Mittwoch Â· Gluteus Medius</div>
+          <div class="exercise-day-tag">Mittwoch · Gluteus Medius</div>
           <div class="exercise-name">Banded Clamshells</div>
-          <div class="exercise-sets">ðŸ’ª 3 Ã— 15â€“20 / Bein</div>
-          <div class="exercise-tip">Stoffband um die Oberschenkel. Langsame, kontrollierte Bewegung â€” spÃ¼re die seitliche GesÃ¤ÃŸmuskulatur. Entscheidend fÃ¼r deine ReitstabilitÃ¤t.</div>
+          <div class="exercise-sets">💪 3 × 15–20 / Bein</div>
+          <div class="exercise-tip">Stoffband um die Oberschenkel. Langsame, kontrollierte Bewegung — spüre die seitliche Gesäßmuskulatur. Entscheidend für deine Reitstabilität.</div>
         </div>
       </div>
 
-      <!-- 4. Floor Tucks â€” YouTube -->
+      <!-- 4. Floor Tucks — YouTube -->
       <div class="exercise-card">
         <div class="yt-wrapper">
-          <span class="yt-label">ðŸŽ¥ Video-Demo</span>
+          <span class="yt-label">🎥 Video-Demo</span>
           <iframe
             src="https://www.youtube.com/embed/ViOihbu9BAA?rel=0&modestbranding=1"
             title="Gleitende Floor Tucks Demo"
@@ -823,10 +821,10 @@
           </iframe>
         </div>
         <div class="exercise-body">
-          <div class="exercise-day-tag">Mittwoch Â· Obliques</div>
+          <div class="exercise-day-tag">Mittwoch · Obliques</div>
           <div class="exercise-name">Gleitende Floor Tucks</div>
-          <div class="exercise-sets">ðŸ’ª 3 Ã— 12â€“15</div>
-          <div class="exercise-tip">LiegestÃ¼tzposition auf Socken (glatter Boden). Knie zur Brust durch Bauchanspannung. HÃ¼fte leicht anheben â€” dann <em>3 Sek.</em> kontrolliert zurÃ¼ck gleiten.</div>
+          <div class="exercise-sets">💪 3 × 12–15</div>
+          <div class="exercise-tip">Liegestützposition auf Socken (glatter Boden). Knie zur Brust durch Bauchanspannung. Hüfte leicht anheben — dann <em>3 Sek.</em> kontrolliert zurück gleiten.</div>
         </div>
       </div>
 
@@ -837,10 +835,10 @@
           <div class="exercise-ref-overlay"></div>
         </div>
         <div class="exercise-body">
-          <div class="exercise-day-tag">Freitag Â· Hintere Kette</div>
+          <div class="exercise-day-tag">Freitag · Hintere Kette</div>
           <div class="exercise-name">Rucksack / Kurzhantel RDLs</div>
-          <div class="exercise-sets">ðŸ’ª 3 Ã— 12â€“15</div>
-          <div class="exercise-tip">HÃ¼fte nach hinten schieben, nicht bÃ¼cken. RÃ¼cken gerade, Knie leicht gebeugt. Die Dehnung in den Hamstrings ist dein Signal â€” das ist perfekt.</div>
+          <div class="exercise-sets">💪 3 × 12–15</div>
+          <div class="exercise-tip">Hüfte nach hinten schieben, nicht bücken. Rücken gerade, Knie leicht gebeugt. Die Dehnung in den Hamstrings ist dein Signal — das ist perfekt.</div>
         </div>
       </div>
 
@@ -851,68 +849,68 @@
           <div class="exercise-ref-overlay"></div>
         </div>
         <div class="exercise-body">
-          <div class="exercise-day-tag">Freitag Â· Hintere Kette</div>
+          <div class="exercise-day-tag">Freitag · Hintere Kette</div>
           <div class="exercise-name">Glute-Fokus Bulgarian Split Squats</div>
-          <div class="exercise-sets">ðŸ’ª 3 Ã— 8â€“12 / Bein</div>
-          <div class="exercise-tip">Hinterer FuÃŸ auf dem Sofa. Torso leicht nach vorne lehnen fÃ¼r maximale Glute-Aktivierung. Kontrolliert runter â€” explosiv hoch.</div>
+          <div class="exercise-sets">💪 3 × 8–12 / Bein</div>
+          <div class="exercise-tip">Hinterer Fuß auf dem Sofa. Torso leicht nach vorne lehnen für maximale Glute-Aktivierung. Kontrolliert runter — explosiv hoch.</div>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- â”€â”€ BIOMECHANICS â”€â”€ -->
+  <!-- ── BIOMECHANICS ── -->
   <div class="section-block" id="hinweise">
-    <p class="section-label">ðŸ“ AusfÃ¼hrung & Form</p>
-    <div class="section-title"><span class="floret">âœ¦</span> Biomechanische Hinweise</div>
+    <p class="section-label">📐 Ausführung &amp; Form</p>
+    <div class="section-title"><span class="floret">✦</span> Biomechanische Hinweise</div>
 
     <div class="bio-card">
-      <div class="bio-icon">ðŸ´</div>
+      <div class="bio-icon">🐴</div>
       <div>
-        <div class="bio-title">Der â€žReiter-Tuck" â€” immer zuerst dehnen</div>
-        <div class="bio-desc">Dehne vor jedem Bauchtraining aktiv deine HÃ¼ftbeuger. Das Reiten verkÃ¼rzt sie chronisch â€” ohne Dehnung stehlen sie beim Bauchtraining die Spannung und deine Ergebnisse leiden erheblich darunter.</div>
+        <div class="bio-title">Der „Reiter-Tuck" — immer zuerst dehnen</div>
+        <div class="bio-desc">Dehne vor jedem Bauchtraining aktiv deine Hüftbeuger. Das Reiten verkürzt sie chronisch — ohne Dehnung stehlen sie beim Bauchtraining die Spannung und deine Ergebnisse leiden erheblich darunter.</div>
       </div>
     </div>
 
     <div class="bio-card">
-      <div class="bio-icon">âœ¨</div>
+      <div class="bio-icon">✨</div>
       <div>
-        <div class="bio-title">Gleitende Floor Tucks â€” die negative Phase zÃ¤hlt</div>
-        <div class="bio-desc">LiegestÃ¼tzposition auf Socken (glatter Boden). Knie durch Bauchanspannung zur Brust â€” HÃ¼fte leicht anheben. Dann <em>3 Sekunden lang</em> kontrolliert zurÃ¼ckgleiten. Die negative Phase macht den entscheidenden Unterschied!</div>
+        <div class="bio-title">Gleitende Floor Tucks — die negative Phase zählt</div>
+        <div class="bio-desc">Liegestützposition auf Socken (glatter Boden). Knie durch Bauchanspannung zur Brust — Hüfte leicht anheben. Dann <em>3 Sekunden lang</em> kontrolliert zurückgleiten. Die negative Phase macht den entscheidenden Unterschied!</div>
       </div>
     </div>
 
     <div class="bio-card">
-      <div class="bio-icon">ðŸ’ª</div>
+      <div class="bio-icon">💪</div>
       <div>
-        <div class="bio-title">Hip Thrusts â€” maximale Po-Aktivierung</div>
-        <div class="bio-desc">SchulterblÃ¤tter fest auf die Sofakante. Kinn Richtung Brust â€” das schÃ¼tzt die LendenwirbelsÃ¤ule. Durch die Ferse drÃ¼cken. Am Hochpunkt den Po 1â€“2 Sekunden maximal anspannen. <strong>Hohlkreuz unbedingt vermeiden!</strong></div>
+        <div class="bio-title">Hip Thrusts — maximale Po-Aktivierung</div>
+        <div class="bio-desc">Schulterblätter fest auf die Sofakante. Kinn Richtung Brust — das schützt die Lendenwirbelsäule. Durch die Ferse drücken. Am Hochpunkt den Po 1–2 Sekunden maximal anspannen. <strong>Hohlkreuz unbedingt vermeiden!</strong></div>
       </div>
     </div>
   </div>
 
-  <!-- â”€â”€ TRACKER NOTE â”€â”€ -->
+  <!-- ── TRACKER NOTE ── -->
   <div class="section-block">
-    <p class="section-label">ðŸ“Š Progressive Ãœberlastung</p>
-    <div class="section-title"><span class="floret">âœ¦</span> Fortschritt tracken</div>
+    <p class="section-label">📊 Progressive Überlastung</p>
+    <div class="section-title"><span class="floret">✦</span> Fortschritt tracken</div>
     <div class="tracker-note">
       <p>Notiere jede Woche dein Gewicht, Widerstandsband und deine Wiederholungszahl.</p>
-      <small>Progressive Ãœberlastung ist das HerzstÃ¼ck deiner Transformation â€” jede kleine Steigerung zÃ¤hlt. Konsistenz schlÃ¤gt Perfektion, jedes Mal. ðŸŒ¸</small>
+      <small>Progressive Überlastung ist das Herzstück deiner Transformation — jede kleine Steigerung zählt. Konsistenz schlägt Perfektion, jedes Mal. 🌸</small>
     </div>
   </div>
 
-  <!-- â”€â”€ FOOTER â”€â”€ -->
+  <!-- ── FOOTER ── -->
   <div class="footer-card">
-    <h2>Du bist <em>stÃ¤rker</em>,<br>als du glaubst.</h2>
-    <p>Jede Wiederholung, jede Mahlzeit, jede Reitstunde â€” das alles baut dich auf. Bleib dran, feiere kleine Fortschritte, und vertraue dem Prozess.</p>
+    <h2>Du bist <em>stärker</em>,<br>als du glaubst.</h2>
+    <p>Jede Wiederholung, jede Mahlzeit, jede Reitstunde — das alles baut dich auf. Bleib dran, feiere kleine Fortschritte, und vertraue dem Prozess.</p>
     <div class="footer-gems">
       <div class="gem-stat">
-        <span class="gem-number">3Ã—</span>
+        <span class="gem-number">3×</span>
         <span class="gem-label">Krafttraining / Woche</span>
       </div>
       <div class="gem-divider"></div>
       <div class="gem-stat">
-        <span class="gem-number">2Ã—</span>
+        <span class="gem-number">2×</span>
         <span class="gem-label">Aktive Erholung</span>
       </div>
       <div class="gem-divider"></div>
@@ -922,7 +920,7 @@
       </div>
       <div class="gem-divider"></div>
       <div class="gem-stat">
-        <span class="gem-number">âˆž</span>
+        <span class="gem-number">∞</span>
         <span class="gem-label">Potenzial in dir</span>
       </div>
     </div>
