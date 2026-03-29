@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ Mein Glow-Up Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FDF8F3;
+    --blush: #F5E6DE;
+    --rose: #E8C4B8;
+    --dusty-rose: #D4928A;
+    --terracotta: #C07A72;
+    --deep-rose: #A05A55;
+    --sage: #B8C5B2;
+    --warm-brown: #4A3228;
+    --soft-brown: #7A5548;
+    --gold: #C9A96E;
+    --light-gold: #E8D5B0;
+    --white: #FFFCFA;
+    --text-dark: #3D2520;
+    --text-mid: #7A5548;
+    --text-light: #B8968A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* BACKGROUND TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 15% 10%, rgba(232,196,184,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 85% 80%, rgba(184,197,178,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(245,230,222,0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── HERO HEADER ── */
+  .hero {
+    text-align: center;
+    padding: 64px 0 48px;
+    position: relative;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 1.4rem;
+    color: var(--dusty-rose);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    display: block;
+    animation: fadeSlideDown 0.8s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    font-weight: 300;
+    color: var(--warm-brown);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    animation: fadeSlideDown 0.9s ease 0.1s both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 8px;
+    animation: fadeSlideDown 1s ease 0.2s both;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px auto;
+    max-width: 320px;
+    animation: fadeIn 1.2s ease 0.4s both;
+  }
+
+  .hero-divider::before,
+  .hero-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--rose), transparent);
+  }
+
+  .hero-divider span {
+    color: var(--dusty-rose);
+    font-size: 1.1rem;
+  }
+
+  /* ── AFFIRMATION BANNER ── */
+  .affirmation {
+    background: linear-gradient(135deg, var(--terracotta) 0%, var(--dusty-rose) 60%, #D4A090 100%);
+    border-radius: 20px;
+    padding: 28px 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeSlideUp 1s ease 0.3s both;
+    box-shadow: 0 8px 32px rgba(192,122,114,0.25);
+  }
+
+  .affirmation::before {
+    content: '❝';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    color: rgba(255,255,255,0.1);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    line-height: 1;
+  }
+
+  .affirmation p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: white;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+  }
+
+  .affirmation small {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 8px;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--warm-brown);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-left: 2px;
+  }
+
+  .section-block {
+    margin-bottom: 48px;
+  }
+
+  /* ── JOURNEY TIMELINE ── */
+  .journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .journey-card {
+    background: var(--white);
+    border: 1px solid var(--rose);
+    border-radius: 18px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .journey-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(160,90,85,0.15);
+  }
+
+  .journey-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .journey-card:nth-child(1)::after { background: linear-gradient(90deg, var(--rose), var(--dusty-rose)); }
+  .journey-card:nth-child(2)::after { background: linear-gradient(90deg, var(--dusty-rose), var(--terracotta)); }
+  .journey-card:nth-child(3)::after { background: linear-gradient(90deg, var(--terracotta), var(--deep-rose)); }
+
+  .journey-week {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .journey-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .journey-card:nth-child(1) .journey-badge { background: var(--blush); }
+  .journey-card:nth-child(2) .journey-badge { background: var(--rose); }
+  .journey-card:nth-child(3) .journey-badge { background: var(--light-gold); }
+
+  .journey-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 6px;
+  }
+
+  .journey-desc {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ── MACROS PILL ROW ── */
+  .macros-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .macro-pill {
+    background: var(--white);
+    border: 1.5px solid var(--rose);
+    border-radius: 50px;
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .macro-icon {
+    font-size: 1.3rem;
+  }
+
+  .macro-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-light);
+    font-weight: 600;
+    display: block;
+  }
+
+  .macro-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--warm-brown);
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  /* ── REST CALLOUT ── */
+  .callout {
+    background: linear-gradient(135deg, #FDF0EB, #FAE8E0);
+    border: 1.5px solid var(--rose);
+    border-left: 4px solid var(--dusty-rose);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+
+  .callout-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--deep-rose);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .callout ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .callout li {
+    font-size: 0.87rem;
+    color: var(--text-mid);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .callout li::before {
+    content: '✦';
+    color: var(--dusty-rose);
+    font-size: 0.6rem;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  /* ── WEEKLY PLAN ── */
+  .week-grid {
+    display: grid;
+    gap: 14px;
+  }
+
+  .day-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: 130px 1fr 1fr;
+  }
+
+  .day-card:hover {
+    border-color: var(--rose);
+    box-shadow: 0 8px 24px rgba(160,90,85,0.1);
+    transform: translateX(4px);
+  }
+
+  .day-card.rest {
+    grid-template-columns: 130px 1fr;
+    background: linear-gradient(135deg, #FAF5F2, var(--white));
+  }
+
+  .day-label {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .day-card:nth-child(1) .day-label { background: linear-gradient(135deg, #F5E6E0, #EDD6CC); }
+  .day-card:nth-child(2) .day-label { background: linear-gradient(135deg, #E8F0E5, #D8E8D2); }
+  .day-card:nth-child(3) .day-label { background: linear-gradient(135deg, #F5E6E0, #EDD6CC); }
+  .day-card:nth-child(4) .day-label { background: linear-gradient(135deg, #E8F0E5, #D8E8D2); }
+  .day-card:nth-child(5) .day-label { background: linear-gradient(135deg, #F5E6E0, #EDD6CC); }
+  .day-card:nth-child(6) .day-label { background: linear-gradient(135deg, #F5EDDC, #EDE0C8); }
+  .day-card:nth-child(7) .day-label { background: linear-gradient(135deg, #EAE4F0, #DDD5EC); }
+
+  .day-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--warm-brown);
+  }
+
+  .day-focus {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-mid);
+    font-weight: 500;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .day-type-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 8px;
+  }
+
+  .badge-strength {
+    background: var(--rose);
+    color: var(--deep-rose);
+  }
+
+  .badge-recovery {
+    background: #D8E8D2;
+    color: #5A7A55;
+  }
+
+  .badge-rest {
+    background: #DDD5EC;
+    color: #6A5A8A;
+  }
+
+  .badge-flex {
+    background: var(--light-gold);
+    color: #7A6030;
+  }
+
+  .day-section {
+    padding: 20px 22px;
+    border-left: 1px solid var(--blush);
+  }
+
+  .day-section-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .day-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .day-section li {
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    line-height: 1.4;
+  }
+
+  .day-section li::before {
+    content: '·';
+    color: var(--dusty-rose);
+    font-size: 1.2rem;
+    line-height: 1.1;
+    flex-shrink: 0;
+  }
+
+  .exercise-chip {
+    display: inline-block;
+    background: var(--blush);
+    border: 1px solid var(--rose);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    color: var(--deep-rose);
+    margin: 2px 2px 2px 0;
+    font-weight: 500;
+  }
+
+  /* ── EXERCISES SECTION ── */
+  .exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .exercise-card {
+    background: var(--white);
+    border: 1px solid var(--blush);
+    border-radius: 20px;
+    padding: 22px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .exercise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--rose), var(--dusty-rose));
+    border-radius: 20px 20px 0 0;
+  }
+
+  .exercise-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(160,90,85,0.12);
+    border-color: var(--rose);
+  }
+
+  .exercise-day-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--dusty-rose);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .exercise-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  .exercise-sets {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--blush);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    color: var(--terracotta);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .exercise-tip {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.55;
+    padding-top: 10px;
+    border-top: 1px solid var(--blush);
+    font-style: italic;
+  }
+
+  /* ── BIOMECHANICS ── */
+  .bio-card {
+    background: var(--white);
+    border: 1px solid var(--blush);
+    border-radius: 18px;
+    padding: 22px 26px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+  }
+
+  .bio-card:hover {
+    border-color: var(--dusty-rose);
+    box-shadow: 0 6px 20px rgba(160,90,85,0.1);
+  }
+
+  .bio-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rose), var(--dusty-rose));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .bio-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 4px;
+  }
+
+  .bio-desc {
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ── TRACKER TABLE ── */
+  .tracker-note {
+    background: linear-gradient(135deg, #FDF3EE, #FAE8E0);
+    border: 1px dashed var(--dusty-rose);
+    border-radius: 16px;
+    padding: 20px 24px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .tracker-note p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--soft-brown);
+  }
+
+  .tracker-note small {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    display: block;
+    margin-top: 6px;
+  }
+
+  /* ── MOTIVATION FOOTER ── */
+  .footer-card {
+    background: linear-gradient(135deg, var(--warm-brown) 0%, var(--soft-brown) 100%);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-card::before {
+    content: '✿';
+    font-size: 14rem;
+    color: rgba(255,255,255,0.03);
+    position: absolute;
+    bottom: -40px;
+    right: -20px;
+    line-height: 1;
+  }
+
+  .footer-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .footer-card h2 em {
+    font-style: italic;
+    color: var(--light-gold);
+  }
+
+  .footer-card p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .footer-gems {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .gem-stat {
+    text-align: center;
+  }
+
+  .gem-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--light-gold);
+    display: block;
+    line-height: 1;
+  }
+
+  .gem-label {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .gem-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+    align-self: stretch;
+    margin: 4px 0;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-up {
+    animation: fadeSlideUp 0.7s ease both;
+  }
+
+  /* ── DECORATIVE FLORETS ── */
+  .section-floret {
+    display: inline-block;
+    color: var(--dusty-rose);
+    font-size: 0.8rem;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  /* Responsive */
+  @media (max-width: 680px) {
+    .journey-grid { grid-template-columns: 1fr; }
+    .day-card { grid-template-columns: 1fr; }
+    .day-card.rest { grid-template-columns: 1fr; }
+    .day-section { border-left: none; border-top: 1px solid var(--blush); }
+    .macros-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <span class="hero-eyebrow">dein persönlicher plan ✨</span>
+    <h1>Home-Workout &<br><em>Glow-Up</em> Dashboard</h1>
+    <p class="hero-subtitle">Reitsport · Hypertrophie · Ernährung</p>
+    <div class="hero-divider"><span>✦</span></div>
+  </div>
+
+  <!-- ── AFFIRMATION ── -->
+  <div class="affirmation">
+    <p>„Du baust nicht nur Muskeln auf — du baust eine stärkere, selbstbewusstere Version von dir."</p>
+    <small>Deine 12-Wochen-Transformation beginnt heute</small>
+  </div>
+
+  <!-- ── JOURNEY TIMELINE ── -->
+  <div class="section-block animate-up">
+    <p class="section-label">⏳ Deine Reise</p>
+    <div class="section-title"><span class="section-floret">✦</span> Was dich erwartet</div>
+    <div class="journey-grid">
+      <div class="journey-card">
+        <div class="journey-week">Woche 1 – 4</div>
+        <div class="journey-badge">🌱</div>
+        <div class="journey-title">Neurologische Anpassung</div>
+        <div class="journey-desc">Dein Nervensystem lernt die Bewegungen. Du wirst spürbar stärker — Übungen fühlen sich stabiler und kontrollierter an.</div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-week">Woche 4 – 8</div>
+        <div class="journey-badge">🌸</div>
+        <div class="journey-title">Erste sichtbare Veränderungen</div>
+        <div class="journey-desc">Kleine, aber echte Formveränderungen werden spürbar. Deine Körperhaltung verbessert sich — auch beim Reiten!</div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-week">Woche 8 – 12</div>
+        <div class="journey-badge">✨</div>
+        <div class="journey-title">Sichtbare Hypertrophie</div>
+        <div class="journey-desc">Deutlich sichtbare Veränderungen: Po-Muskulatur wächst, Bauchmuskeln werden definierter. Dein Glow-Up ist real.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MACROS ── -->
+  <div class="section-block">
+    <p class="section-label">🍽️ Tägliche Ziele</p>
+    <div class="section-title"><span class="section-floret">✦</span> Deine Makros</div>
+    <div class="macros-row">
+      <div class="macro-pill">
+        <span class="macro-icon">🔥</span>
+        <div>
+          <span class="macro-label">Kalorien / Tag</span>
+          <span class="macro-value">~2.450 kcal</span>
+        </div>
+      </div>
+      <div class="macro-pill">
+        <span class="macro-icon">💪</span>
+        <div>
+          <span class="macro-label">Protein / Tag</span>
+          <span class="macro-value">115 – 125 g</span>
+        </div>
+      </div>
+      <div class="macro-pill">
+        <span class="macro-icon">📈</span>
+        <div>
+          <span class="macro-label">Gewichtzunahme</span>
+          <span class="macro-value">~0,5 kg / Monat</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAUSE CALLOUT -->
+    <div class="callout">
+      <div class="callout-title">⏱️ Wichtige Pausenzeiten — bitte nicht überspringen!</div>
+      <ul>
+        <li>Schwere Bein- & Po-Übungen (RDLs, Hip Thrusts, Split Squats): <strong>90–120 Sek. Pause</strong> zwischen den Sätzen</li>
+        <li>Bauch & Isolation (Crunches, Tucks, Clamshells): <strong>60–90 Sek. Pause</strong></li>
+        <li>Einbeinige Übungen: Linkes Bein → 30 Sek. atmen → Rechtes Bein → <strong>90–120 Sek. Pause</strong> → Nächster Satz</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── WEEKLY PLAN ── -->
+  <div class="section-block">
+    <p class="section-label">📅 Wochenplan</p>
+    <div class="section-title"><span class="section-floret">✦</span> Deine Woche auf einen Blick</div>
+
+    <div class="week-grid">
+
+      <!-- MONTAG -->
+      <div class="day-card">
+        <div class="day-label">
+          <div class="day-name">Mo</div>
+          <div class="day-focus">Gluteus Max & Rumpf</div>
+          <span class="day-type-badge badge-strength">Kraft</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🍲 Ernährung</div>
+          <ul>
+            <li>60g Haferflocken + 150g Skyr</li>
+            <li>150g Hähnchen + 200g Kartoffeln</li>
+            <li>Vollkornbrot + Hüttenkäse</li>
+            <li>150g Lachs + Quinoa</li>
+            <li><em>(Opt.) 100g Magerquark</em></li>
+          </ul>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🏋️‍♀️ Training</div>
+          <div>
+            <span class="exercise-chip">Hip Thrusts einbeinig 4×10-15/Bein</span>
+            <span class="exercise-chip">Reverse Crunches 3×15-20</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIENSTAG -->
+      <div class="day-card rest">
+        <div class="day-label">
+          <div class="day-name">Di</div>
+          <div class="day-focus">Aktive Erholung</div>
+          <span class="day-type-badge badge-recovery">Reiten 🐴</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">💬 Fokus</div>
+          <ul>
+            <li>Kein Krafttraining — lass deinen Körper erholen</li>
+            <li>Proteinfokus: Rindfleisch + Quinoa + Brokkoli</li>
+            <li>Muskelregeneration genießen ✨</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MITTWOCH -->
+      <div class="day-card">
+        <div class="day-label">
+          <div class="day-name">Mi</div>
+          <div class="day-focus">Glut. Medius & Obliques</div>
+          <span class="day-type-badge badge-strength">Kraft</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🍲 Ernährung</div>
+          <ul>
+            <li>60g Haferflocken + 150g Skyr</li>
+            <li>150g Hähnchen + 200g Kartoffeln</li>
+            <li>Vollkornbrot + Hüttenkäse</li>
+            <li>150g Lachs + Quinoa</li>
+          </ul>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🏋️‍♀️ Training</div>
+          <div>
+            <span class="exercise-chip">Banded Clamshells 3×15-20/Bein</span>
+            <span class="exercise-chip">Floor Tucks 3×12-15</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DONNERSTAG -->
+      <div class="day-card rest">
+        <div class="day-label">
+          <div class="day-name">Do</div>
+          <div class="day-focus">Aktive Erholung</div>
+          <span class="day-type-badge badge-recovery">Reiten 🐴</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">💬 Fokus</div>
+          <ul>
+            <li>Kein Krafttraining — genieße das Reiten</li>
+            <li>Ernährung wie gewohnt beibehalten</li>
+            <li>Dein Körper baut gerade auf — sei geduldig 🌸</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FREITAG -->
+      <div class="day-card">
+        <div class="day-label">
+          <div class="day-name">Fr</div>
+          <div class="day-focus">Hintere Kette gesamt</div>
+          <span class="day-type-badge badge-strength">Kraft</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🍲 Ernährung</div>
+          <ul>
+            <li>60g Haferflocken + 150g Skyr</li>
+            <li>150g Hähnchen + 200g Kartoffeln</li>
+            <li>Vollkornbrot + Hüttenkäse</li>
+            <li>150g Lachs + Quinoa</li>
+          </ul>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🏋️‍♀️ Training</div>
+          <div>
+            <span class="exercise-chip">Rucksack-RDLs 3×12-15</span>
+            <span class="exercise-chip">Bulgarian Split Squats 3×8-12/Bein</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAMSTAG -->
+      <div class="day-card rest">
+        <div class="day-label">
+          <div class="day-name">Sa</div>
+          <div class="day-focus">Familie · Flex</div>
+          <span class="day-type-badge badge-flex">Flexibel</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">💬 Fokus</div>
+          <ul>
+            <li>Flexibles, proteinreiches Frühstück</li>
+            <li>Auswärtsessen erlaubt — Fokus auf Protein</li>
+            <li>Ausweichtag: Training nachholen falls nötig</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SONNTAG -->
+      <div class="day-card rest">
+        <div class="day-label">
+          <div class="day-name">So</div>
+          <div class="day-focus">Familie · Meal Prep</div>
+          <span class="day-type-badge badge-rest">Ruhetag 💜</span>
+        </div>
+        <div class="day-section">
+          <div class="day-section-label">🥘 Meal Prep</div>
+          <ul>
+            <li>Hähnchen & Quinoa für Mo–Mi vorkochen</li>
+            <li>Snacks vorbereiten: Magerquark portionieren</li>
+            <li>Erhole dich — du hast es verdient ✨</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── EXERCISES ── -->
+  <div class="section-block">
+    <p class="section-label">🏋️‍♀️ Übungsbibliothek</p>
+    <div class="section-title"><span class="section-floret">✦</span> Deine Übungen</div>
+    <div class="exercises-grid">
+
+      <div class="exercise-card">
+        <div class="exercise-day-tag">Montag · Gluteus Max</div>
+        <div class="exercise-name">Einbeinige Sofa-Hip-Thrusts</div>
+        <div class="exercise-sets">💪 4 × 10–15 / Bein</div>
+        <div class="exercise-tip">Schulterblätter auf die Sofakante. Ein Bein anheben, durch die Ferse drücken. Kinn zur Brust, Po am Hochpunkt maximal anspannen. Kein Hohlkreuz!</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-day-tag">Montag · Rumpf</div>
+        <div class="exercise-name">Reverse Crunches am Boden</div>
+        <div class="exercise-sets">💪 3 × 15–20</div>
+        <div class="exercise-tip">Hüftbeuger vorher aktiv dehnen! Die Reiterhaltung verkürzt sie — ohne Dehnung „stehlen" sie die Spannung von deinen Bauchmuskeln.</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-day-tag">Mittwoch · Gluteus Medius</div>
+        <div class="exercise-name">Banded Clamshells</div>
+        <div class="exercise-sets">💪 3 × 15–20 / Bein</div>
+        <div class="exercise-tip">Mit Stoffband um die Oberschenkel. Kontrollierte, langsame Bewegung. Spüre die seitliche Gesäßmuskulatur — sie ist entscheidend für deine Reitstabilität.</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-day-tag">Mittwoch · Obliques</div>
+        <div class="exercise-name">Gleitende Floor Tucks</div>
+        <div class="exercise-sets">💪 3 × 12–15</div>
+        <div class="exercise-tip">Liegestützposition auf Socken (glatter Boden). Knie zur Brust durch Bauchanspannung ziehen, Hüfte leicht anheben. 3 Sek. langsam zurück gleiten. 🎥 <a href="https://www.youtube.com/watch?v=ViOihbu9BAA" style="color: var(--dusty-rose);">Video ansehen</a></div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-day-tag">Freitag · Hintere Kette</div>
+        <div class="exercise-name">Rucksack / Kurzhantel RDLs</div>
+        <div class="exercise-sets">💪 3 × 12–15</div>
+        <div class="exercise-tip">Hüfte nach hinten schieben, nicht bücken. Rücken gerade, Knie leicht gebeugt. Du spürst die Dehnung der Hamstrings — das ist perfekt.</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-day-tag">Freitag · Hintere Kette</div>
+        <div class="exercise-name">Glute-Fokus Bulgarian Split Squats</div>
+        <div class="exercise-sets">💪 3 × 8–12 / Bein</div>
+        <div class="exercise-tip">Hinterer Fuß auf dem Sofa. Torso leicht nach vorne lehnen für mehr Glute-Aktivierung. Kontrolliert runter — explosiv hoch.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── BIOMECHANICS ── -->
+  <div class="section-block">
+    <p class="section-label">📐 Ausführung & Form</p>
+    <div class="section-title"><span class="section-floret">✦</span> Biomechanische Hinweise</div>
+
+    <div class="bio-card">
+      <div class="bio-icon">🐴</div>
+      <div>
+        <div class="bio-title">Der „Reiter-Tuck" — beachte das immer</div>
+        <div class="bio-desc">Dehne vor jedem Bauchmuskeltraining aktiv deine Hüftbeuger. Das Reiten verkürzt sie chronisch — verkürzte Hüftbeuger „stehlen" beim Bauchtraining die Spannung und reduzieren deine Ergebnisse erheblich.</div>
+      </div>
+    </div>
+
+    <div class="bio-card">
+      <div class="bio-icon">✨</div>
+      <div>
+        <div class="bio-title">Gleitende Floor Tucks — die Details</div>
+        <div class="bio-desc">Liegestützposition auf Socken auf glattem Boden. Knie durch Bauchanspannung zur Brust ziehen — Hüfte dabei leicht anheben. Dann <em>3 Sekunden lang</em> kontrolliert zurück gleiten. Die negative Phase macht den Unterschied!</div>
+      </div>
+    </div>
+
+    <div class="bio-card">
+      <div class="bio-icon">💪</div>
+      <div>
+        <div class="bio-title">Einbeinige Sofa-Hip-Thrusts — maximale Aktivierung</div>
+        <div class="bio-desc">Schulterblätter fest auf die Sofakante. Kinn Richtung Brust (schützt die Lendenwirbelsäule). Durch die Ferse des Standbeins drücken. Am obersten Punkt den Po 1–2 Sekunden maximal anspannen. <strong>Hohlkreuz unbedingt vermeiden!</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TRACKER NOTE ── -->
+  <div class="section-block">
+    <p class="section-label">📊 Progressive Überlastung</p>
+    <div class="section-title"><span class="section-floret">✦</span> Fortschritt tracken</div>
+    <div class="tracker-note">
+      <p>Notiere jede Woche dein Gewicht, Widerstandsband und deine Wiederholungen.</p>
+      <small>Progressive Überlastung ist das Herzstück deiner Transformation — jede kleine Steigerung zählt. 🌸</small>
+    </div>
+  </div>
+
+  <!-- ── FOOTER MOTIVATION ── -->
+  <div class="footer-card">
+    <h2>Du bist <em>stärker</em>,<br>als du glaubst.</h2>
+    <p>Jede Wiederholung, jede Mahlzeit, jede Reitstunde — das alles baut dich auf. Bleib dran, feiere kleine Fortschritte, und vertraue dem Prozess. ✨</p>
+    <div class="footer-gems">
+      <div class="gem-stat">
+        <span class="gem-number">3×</span>
+        <span class="gem-label">Krafttraining / Woche</span>
+      </div>
+      <div class="gem-divider"></div>
+      <div class="gem-stat">
+        <span class="gem-number">2×</span>
+        <span class="gem-label">Aktive Erholung</span>
+      </div>
+      <div class="gem-divider"></div>
+      <div class="gem-stat">
+        <span class="gem-number">12</span>
+        <span class="gem-label">Wochen bis zum Ziel</span>
+      </div>
+      <div class="gem-divider"></div>
+      <div class="gem-stat">
+        <span class="gem-number">∞</span>
+        <span class="gem-label">Potenzial in dir</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
